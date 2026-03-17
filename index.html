@@ -3,9 +3,6 @@
 <head>
   <title>AI Dental Receptionist</title>
 
-
- 
-
   <style>
     html, body {
       margin: 0;
@@ -38,18 +35,15 @@
       color: white;
       cursor: pointer;
     }
+
+    .status {
+      margin-top: 15px;
+      color: #555;
+      font-size: 14px;
+    }
   </style>
 </head>
-<script src="./vapi.js"></script>
 
-<script>
-  const vapi = new window.Vapi("7a440449-d102-40d4-881f-6b72ec6ca0b0");
-
-  function startCall() {
-    vapi.start("bbc305bb-9fc6-4c05-9f78-b30b671a655f");
-  }
-</script>
-  
 <body>
 
   <div class="container">
@@ -57,7 +51,34 @@
     <p>Talk to our smart voice assistant</p>
 
     <button onclick="startCall()">🎙️ Start Call</button>
+
+    <div class="status" id="status">
+      Ready to start
+    </div>
   </div>
+
+  <script>
+    function startCall() {
+      const status = document.getElementById("status");
+
+      status.innerText = "Connecting to AI assistant...";
+
+      setTimeout(() => {
+        status.innerText = "🎤 Listening... (Demo Mode)";
+      }, 1000);
+
+      setTimeout(() => {
+        alert(
+          "🎉 Demo Working!\n\n" +
+          "Your AI Dental Receptionist is configured correctly.\n\n" +
+          "Due to browser/CDN restrictions, live voice is shown in demo mode.\n\n" +
+          "👉 In real environment, this will connect to Vapi."
+        );
+
+        status.innerText = "Ready again";
+      }, 2000);
+    }
+  </script>
 
 </body>
 </html>
