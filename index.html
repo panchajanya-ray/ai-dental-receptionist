@@ -2,7 +2,9 @@
 <html>
 <head>
   <title>AI Dental Receptionist</title>
-  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@vapi-ai/web/dist/index.umd.js"></script>
 
   <style>
     html, body {
@@ -24,6 +26,7 @@
       padding: 40px;
       border-radius: 12px;
       text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
     button {
@@ -44,25 +47,34 @@
     <h1>🦷 AI Dental Receptionist</h1>
     <p>Talk to our smart voice assistant</p>
 
-    <button onclick="startCall()">
-      🎙️ Start Call
-    </button>
-
-    <div class="footer">
-      Powered by AI Voice Automation
-    </div>
+    <button onclick="startCall()">🎙️ Start Call</button>
   </div>
 
-  <script type="module">
-  import Vapi from "https://esm.sh/@vapi-ai/web";
+  <script>
+    let vapi;
 
-  const vapi = new Vapi("7a440449-d102-40d4-881f-6b72ec6ca0b0");
+    
+    window.onload = function () {
+      console.log("Page loaded");
 
-  window.startCall = function () {
-    console.log("Starting call...");
-    vapi.start("bbc305bb-9fc6-4c05-9f78-b30b671a655f");
-  };
-</script>
+      if (!window.Vapi) {
+        alert("Vapi SDK failed to load");
+        return;
+      }
+
+      vapi = new window.Vapi("7a440449-d102-40d4-881f-6b72ec6ca0b0");
+    };
+
+    function startCall() {
+      if (!vapi) {
+        alert("Vapi not ready. Refresh page.");
+        return;
+      }
+
+      console.log("Starting call...");
+      vapi.start("bbc305bb-9fc6-4c05-9f78-b30b671a655f");
+    }
+  </script>
 
 </body>
 </html>
