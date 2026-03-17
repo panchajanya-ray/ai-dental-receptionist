@@ -1,0 +1,29 @@
+[
+  {
+    "name": "check_availability",
+    "description": "Check available appointment slots",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "date": { "type": "string" }
+      },
+      "required": ["date"]
+    }
+  },
+  {
+    "name": "book_appointment",
+    "description": "Book a dental appointment",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "full_name": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "reason": { "type": "string" }
+      },
+      "required": ["full_name", "phone", "date", "time"]
+    }
+  }
+]
