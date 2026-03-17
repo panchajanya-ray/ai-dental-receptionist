@@ -6,16 +6,17 @@ An AI-powered voice receptionist that answers patient calls, handles queries, an
 
 ## 🚀 Live Demo
 
-👉 Click here to try:
-
-
----
-
-## 🎥 Demo Video
-
-
+👉 [Click here to try](https://panchajanya-ray.github.io/ai-dental-receptionist/)
 
 ---
+
+## 🎥 Demo Videos
+
+### 🤖 AI Assistant Demonstration
+👉 [Watch Video](https://www.loom.com/share/c355a1e5a5ee4b0ba9479e2884c654ce)
+
+### 🌐 Webpage Demo
+👉 [Watch Video](https://www.loom.com/share/e31f71cd50454d10a7d36da5b22b589a)
 
 ## ✨ Features
 
