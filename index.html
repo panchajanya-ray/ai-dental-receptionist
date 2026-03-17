@@ -3,7 +3,6 @@
 <head>
   <title>AI Dental Receptionist</title>
   
-  <script src="https://cdn.jsdelivr.net/npm/@vapi-ai/web/dist/index.umd.js"></script>
 
   <style>
     html, body {
@@ -54,24 +53,15 @@
     </div>
   </div>
 
-  <script>
-    let vapi;
+  <script type="module">
+    import Vapi from "https://cdn.jsdelivr.net/npm/@vapi-ai/web/+esm";
 
-    window.onload = function () {
-      console.log("Page loaded");
-      
-      vapi = new window.Vapi("7a440449-d102-40d4-881f-6b72ec6ca0b0");
-    };
+    const vapi = new Vapi("7a440449-d102-40d4-881f-6b72ec6ca0b0");
 
-    function startCall() {
-      if (!vapi) {
-        alert("Vapi not loaded yet. Refresh page.");
-        return;
-      }
-
+    window.startCall = function () {
       console.log("Starting call...");
       vapi.start("bbc305bb-9fc6-4c05-9f78-b30b671a655f");
-    }
+    };
   </script>
 
 </body>
