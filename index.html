@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Dental Receptionist</title>
+  <script src="https://unpkg.com/@vapi-ai/web"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      width: 360px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      color: #2c7be5;
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    button {
+      background: linear-gradient(135deg, #2c7be5, #00c6ff);
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🦷 AI Dental Receptionist</h1>
+    <p>Talk to our smart voice assistant</p>
+
+    <button onclick="startCall()">
+      🎙️ Start Call
+    </button>
+
+    <div class="footer">
+      Powered by AI Voice Automation
+    </div>
+  </div>
+
+  <script>
+    const vapi = new Vapi("7a440449-d102-40d4-881f-6b72ec6ca0b0");
+
+    function startCall() {
+      vapi.start("bbc305bb-9fc6-4c05-9f78-b30b671a655f");
+    }
+  </script>
+
+</body>
+</html>
