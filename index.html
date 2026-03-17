@@ -40,17 +40,7 @@
     }
   </style>
 </head>
-
-<body>
-
-  <div class="container">
-    <h1>🦷 AI Dental Receptionist</h1>
-    <p>Talk to our smart voice assistant</p>
-
-    <button onclick="startCall()">🎙️ Start Call</button>
-  </div>
-
-  <script>
+<script>
   const script = document.createElement("script");
   script.src = "https://unpkg.com/@vapi-ai/web/dist/index.umd.js";
   script.onload = () => {
@@ -70,6 +60,15 @@
 
   document.body.appendChild(script);
 </script>
+  
+<body>
+
+  <div class="container">
+    <h1>🦷 AI Dental Receptionist</h1>
+    <p>Talk to our smart voice assistant</p>
+
+    <button onclick="startCall()">🎙️ Start Call</button>
+  </div>
 
 </body>
 </html>
