@@ -89,3 +89,6 @@ GitHub: https://github.com/panchajanya-ray
 LinkedIn: https://linkedin.com/in/panchajanya-ray
 
 Feel free to reach out for collaborations or freelance opportunities.
+
+---
+⚠️ Note: API key is exposed for demo purposes only.
