@@ -42,8 +42,16 @@
 <body>
 
   <div class="container">
-    <h2>🦷 AI Dental Receptionist</h2>
-    <button onclick="startCall()">Start Call</button>
+    <h1>🦷 AI Dental Receptionist</h1>
+    <p>Talk to our smart voice assistant</p>
+
+    <button onclick="startCall()">
+      🎙️ Start Call
+    </button>
+
+    <div class="footer">
+      Powered by AI Voice Automation
+    </div>
   </div>
 
   <script>
@@ -51,9 +59,8 @@
 
     window.onload = function () {
       console.log("Page loaded");
-
-      // VERY IMPORTANT 👇
-      vapi = new window.Vapi("YOUR_PUBLIC_API_KEY");
+      
+      vapi = new window.Vapi("7a440449-d102-40d4-881f-6b72ec6ca0b0");
     };
 
     function startCall() {
@@ -63,7 +70,7 @@
       }
 
       console.log("Starting call...");
-      vapi.start("YOUR_ASSISTANT_ID");
+      vapi.start("bbc305bb-9fc6-4c05-9f78-b30b671a655f");
     }
   </script>
 
