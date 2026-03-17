@@ -40,25 +40,15 @@
     }
   </style>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/dist/index.umd.js"></script>
+
 <script>
-  const script = document.createElement("script");
-  script.src = "https://unpkg.com/@vapi-ai/web/dist/index.umd.js";
-  script.onload = () => {
-    console.log("Vapi loaded successfully");
+  const vapi = new window.Vapi("7a440449-d102-40d4-881f-6b72ec6ca0b0");
 
-    const vapi = new window.Vapi("7a440449-d102-40d4-881f-6b72ec6ca0b0");
-
-    window.startCall = function () {
-      console.log("Starting call...");
-      vapi.start("bbc305bb-9fc6-4c05-9f78-b30b671a655f");
-    };
-  };
-
-  script.onerror = () => {
-    alert("Failed to load Vapi SDK. Check internet or try again.");
-  };
-
-  document.body.appendChild(script);
+  function startCall() {
+    console.log("Starting call...");
+    vapi.start("bbc305bb-9fc6-4c05-9f78-b30b671a655f");
+  }
 </script>
   
 <body>
